@@ -1,0 +1,3 @@
+#!/bin/bash
+#script that prints absolute path name of the current working directory
+echo "/root/alx-system_engineering_devops/0x00-shell_basics"
