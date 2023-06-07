@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "$Home"
+echo " cd Home"
