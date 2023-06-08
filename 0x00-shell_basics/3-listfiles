@@ -1,3 +1,2 @@
-#!/bin/bash
-echo " current dir content in long forma"t
- ls -l $file
+#!/bin/bash 
+ls -la
