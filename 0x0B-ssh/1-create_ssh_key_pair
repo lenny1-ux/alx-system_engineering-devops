@@ -1,4 +1,4 @@
-ssh-keygen
-/.ssh/school
-betty
-betty
+#!/usr/bin/env bash
+# Script to create new RSA key pair with 4096 bits called `school`
+
+ssh-keygen -b 4096 -t rsa -N password -f school
