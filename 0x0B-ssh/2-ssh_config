@@ -1,7 +1,7 @@
 Host *
 #   ForwardAgent no
 
-     HostName 100.25.203.41
+     HostName 54.90.61.85
      User ubuntu
      IdentityFile ~/.ssh/school
      PasswordAuthenication no

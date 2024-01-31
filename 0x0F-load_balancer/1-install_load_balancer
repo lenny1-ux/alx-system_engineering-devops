@@ -41,7 +41,7 @@ frontend lesafy-tech-frontend
 backend lesafy-tech-backend
     balance roundrobin
     server 103907-web-01 54.90.61.85:80 check
-    server 103907-web-02 35.168.7.244:80 check
+    server 103907-web-02 35.175.64.79:80 check
 "
 
 # shellcheck disable=SC2154
