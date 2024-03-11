@@ -1,6 +1,7 @@
 #Virtualbox Crushing
 
 2024-02-07, 2024-02-09
+
 #Issue Summary
 
 The following report explains my computer freezing while using Vagrant to boot up. The machine index was corrupted from the freeze, and  vagrant box was not accessible. Went through several troubleshooting steps to resolve the issue, and eventually got my machine back up.
@@ -35,6 +36,7 @@ Hardware: Dell Inspiron X57 Laptop (2022)
     Desktop Environment: LXDE (Lubuntu)
 
 #Detailed Resolution and Recovery
+
 #Recovery of virtual development environment
 
  0   Error:
@@ -55,9 +57,7 @@ Corrupted index file, Stack overflow
  1.   Navigated to ~/.vagrant.d/data/machine-index/ and ran the command: rm -f *
 
  2.   Next, encountered this error:
- The VirtualBox VM was created with a user that doesn't match the current user running Vagrant. VirtualBox requires that the same user be used to manage the VM that was created. Please re-run Vagrant with that user. This is not a Vagrant issue.
-
-The UID used to create the VM was:
+ The VirtualBox VM was created with a user that doesn't match the current user running Vagrant. VirtualBox requires that the same user be used to manage the VM that was created. Please re-run Vagrant with that user. This is not a Vagrant issue.The UID used to create the VM was:
 Your UID is: 45
 
 
@@ -66,7 +66,8 @@ Your UID is: 45
  4.   Vagrant brought up a new machine, not my original VM. Had to get my original VM back. vagrant box disconnected
 
  5.   Navigated to: ~/Virtualbox\ VMs/Documents_default_1492630824800_98335/Documents_default_1492630824800_98335.vbox-prev and located this line:
-  <Machine uuid="{db179e00-3ba1-4e08-a86a-ad7ab69ddac4}" name="Documents_default_1496197504242_4039" OSType="Ubuntu_64" snapshotFolder="Snapshots" lastStateChange="2017-04-18T22:10:38Z">
+  
+<Machine uuid="{db179e00-3ba1-4e08-a86a-ad7ab69ddac4}" name="Documents_default_1496197504242_4039" OSType="Ubuntu_64" snapshotFolder="Snapshots" lastStateChange="2017-04-18T22:10:38Z">
 
   6. Navigated to: /home/concati/Documents/.vagrant/machines/default/virtualbox and ran this command:
 echo -n db179e00-3ba1-4e08-a86a-ad7ab69ddac4 > id
@@ -74,10 +75,12 @@ vagrant up
 
 
   7.  Original development environment virtual machine was recovered, started a clean up process
+
   8.  Destroyed all other machines that I didn't need through the virtualbox GUI.
 
 
 #Preventative Measures
+
 It will be necessary to look into this problem in the future, but for now, the laptop cooling pad solution has the system operating within acceptible ranges. Further investigation into the fan configuration problem is overshadowed by higher priorities.
 
 #Author
