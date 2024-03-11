@@ -35,7 +35,7 @@ Hardware: Dell Inspiron X57 Laptop (2022)
     Desktop Environment: LXDE (Lubuntu)
 
 #Detailed Resolution and Recovery
-Recovery of virtual development environment
+#Recovery of virtual development environment
 
  0   Error:
 The machine index which stores all required information about
@@ -75,6 +75,8 @@ vagrant up
 
   7.  Original development environment virtual machine was recovered, started a clean up process
   8.  Destroyed all other machines that I didn't need through the virtualbox GUI.
+
+
 #Preventative Measures
 It will be necessary to look into this problem in the future, but for now, the laptop cooling pad solution has the system operating within acceptible ranges. Further investigation into the fan configuration problem is overshadowed by higher priorities.
 
