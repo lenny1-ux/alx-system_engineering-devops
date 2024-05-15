@@ -38,14 +38,14 @@ frontend lesafy-tech-frontend
         mode http
         http-request redirect scheme https code 301 unless { ssl_fc }
         http-request set-header X_Forwarded-Proto http
-        default_backend clickviral-backend
+        default_backend lesafy-backend
 
 frontend lesafy-tech-frontend-https
         bind *:443 ssl crt /etc/haproxy/certs/www.lesafy.tech.pem
         http-request set-header X-Forwarded-Proto https
-        default_backend clickviral-backend
+        default_backend lesafy-backend
 
 backend lesafy-backend
         balance roundrobin
-        server 103907-web-01 54.90.61.85:80 check
-        server 103907-web-02 35.175.64.79:80 check
+        server 103907-web-01 54.84.39.141:80 check
+        server 103907-web-02 100.26.159.20:80 check

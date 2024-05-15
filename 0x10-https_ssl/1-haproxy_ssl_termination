@@ -47,5 +47,5 @@ frontend lesafy-frontend-https
 
 backend lesafy-backend
         balance roundrobin
-        server 103907-web-01 54.90.61.85:80 check
-        server 103907-web-02 35.175.64.79:80 check
+        server 103907-web-01 54.84.39.141:80 check
+        server 103907-web-02 100.26.159.20:80 check
